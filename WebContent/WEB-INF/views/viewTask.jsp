@@ -38,25 +38,31 @@
 			</div>
 		</div>
 		
-		<div align = "center" style="color: darkblue;margin-top: 100px;background-color: azure;">
-			<label style="font-family: cursive;">Select Project:</label>
-			<select class = "form-control display" id=selectbox style="background-color: azure;color: darkblue;">
-				<p>Filter by projects</p>
-				<option id="project" style="font-family: cursive;" disabled="disabled" selected="selected">Select</option>
-				<c:forEach var="list" items="${projectDetails}" varStatus="status">
-					<option id=project>${list.projectName}</option>
-				</c:forEach>
-			</select>
+			<div align = "center" style="color: darkblue;margin-top: 100px;background-color: azure; border: thick;">
+				<label style="font-family: cursive;">Select Project:</label>
+				<select class = "form-control display" id=selectbox style="background-color: azure;color: darkblue;">
+					<p>Filter by projects</p>
+					<option id="project" style="font-family: cursive;" disabled="disabled" selected="selected">Select</option>
+					<c:forEach var="list" items="${projectDetails}" varStatus="status">
+						<option id=project>${list.projectName}</option>
+					</c:forEach>
+				</select>
+			
+				<div id="result" style="color: darkblue;background-color: azure;"></div>
+			
+				<table id="table" class="hidden" border=1>
+					<tr>
+						<th>Id</th>
+						<th>Employee</th>
+					</tr>
+				</table>
+			</div>
+		<div style="padding-top: 60">
+			<div style="padding-left: 600; top: 250">
+				<button style="float:inherit;" type="button" class="btn btn-default" name="back" onclick="history.back()">Cancel</button>
+			</div>
+		</div>	
 		
-			<div id="result" style="color: darkblue;background-color: azure;"></div>
-		
-			<table id="table" class="hidden" border=1>
-				<tr>
-					<th>Id</th>
-					<th>Employee</th>
-				</tr>
-			</table>
-		</div>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

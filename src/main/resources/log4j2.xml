@@ -3,8 +3,8 @@
 <Configuration status="INFO" packages="com.mindtree.*">
 	<Appenders>
 		 <RollingFile name="logFile"
-			fileName ="D:/logs/Spring201.log"
-			filePattern="D:/logs/Spring201.log-%d{yyyy-MM-dd}.log"> 
+			fileName ="C:/M1049007/logs/Spring201.log"
+			filePattern="C:/M1049007/logs/Spring201.log-%d{yyyy-MM-dd}.log"> 
 			<PatternLayout>
 				<Pattern>%d %p %c{2.} [%t] %m %n</Pattern>
 			</PatternLayout>

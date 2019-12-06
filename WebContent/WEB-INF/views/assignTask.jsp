@@ -29,7 +29,7 @@ body {
 	<div align="center" class="navbar navbar-inverse navbar-fixed-top">
 	<div class="navbar-header"></div>
 		<div class="header">
-			<h3 style="color: azure;font-family: cursive;">ASSIGNMENT OF TASKS</h3>
+			<h4 style="color: azure;font-family: cursive;">ASSIGNMENT OF TASKS</h4>
 		</div>
 	</div>
 	<br><br><br><br>
@@ -62,9 +62,10 @@ body {
 				</td>
 			</tr>
 			<tr>
-				<td style="color: darkblue;font-family: cursive;"><b>Employees: </b>
+				<td style="color: darkblue;font-family: cursive;"><b>Employee </b>
 					<select id="result" class="form-control" style="background-color: azure;color: darkblue;">
-						<option>Employees.. </option>
+						<option>Select Employee </option>
+									
 					</select>
 				</td>
 			</tr>
@@ -72,7 +73,7 @@ body {
 		<br>
 		
 		<input type="button" class="btn btn-primary" value="Add a Task" onclick="Call();">
-		<input type="button" class="btn btn-danger" value="Cancel" onclick="cancel();" />
+		<button style="float: bottom"  type="button" class="btn btn-default" name="back" onclick="history.back()">Cancel</button>
   
 		<div id="updateResult"></div>
 	</div>
@@ -124,7 +125,7 @@ body {
 			success : function(data) {
 				console.log(data);
 				if(data === "no employees found for selected project select other project"){
-			             location.href = "http://localhost:8081/Spring201/assignTask";
+			             location.href = "http://localhost:8080/Spring201/assignTask";
 				}
 				$.each(data, function(index, currEmp) {
 					var toAppend = '';
@@ -167,7 +168,7 @@ body {
 				$('#updateResult').append("Details added successfully")
 				alert("Details added successfully.")
 				alert("Redirecting to home page.")
-				location.href = "http://localhost:8081/Spring201/"
+				location.href = "http://localhost:8080/Spring201/"
 			},
 			complete : function(xhr, textStatus) {
 			},
@@ -179,7 +180,7 @@ body {
 
 	function cancel() {
 		alert("Redirecting to home page.")
-		location.href = "http://localhost:8081/Spring201/"
+		location.href = "http://localhost:8080/Spring201/"
 	}
 </script>
 
