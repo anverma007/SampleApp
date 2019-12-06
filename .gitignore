@@ -1,3 +1,7 @@
 /.gitconfig
 /.bash_history
 /.bashrc
+target/
+.classpath
+.project
+.settings/
