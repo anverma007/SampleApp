@@ -65,7 +65,8 @@ body {
 				<td style="color: darkblue;font-family: cursive;"><b>Employee </b>
 					<select id="result" class="form-control" style="background-color: azure;color: darkblue;">
 						<option>Select Employee </option>
-									
+						
+							
 					</select>
 				</td>
 			</tr>
@@ -73,7 +74,7 @@ body {
 		<br>
 		
 		<input type="button" class="btn btn-primary" value="Add a Task" onclick="Call();">
-		<button style="float: bottom"  type="button" class="btn btn-default" name="back" onclick="history.back()">Cancel</button>
+		<button   type="button" class="btn btn-default" name="back" onclick="history.back()">Cancel</button>
   
 		<div id="updateResult"></div>
 	</div>
